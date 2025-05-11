@@ -1,0 +1,33 @@
+.card{
+    width: 300x;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    gap: 7px;
+}
+.songimg{
+    width: 280px;
+    border-radius: 8px;
+}
+.title{
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: bold;
+    color: black;
+}
+.genre ,.author{
+    font-size: 0.9rem;
+    color: rgb(83, 83, 83);
+    margin: 0;
+}
+.infobtn{
+    background-color: red;
+    color: white;
+    width: 70px;
+    border: none;
+    border-radius: 15px;
+    height: 40px;
+    cursor: pointer;
+}

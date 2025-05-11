@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.welcomeText {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.link:hover {
+  background-color: #f0f0f0;
+}

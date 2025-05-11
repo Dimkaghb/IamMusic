@@ -1,0 +1,63 @@
+.annotation {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.annotation:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.annotationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.annotationInfo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.timestamp {
+    font-size: 0.9rem;
+    color: #f60909;
+    font-weight: 600;
+    background: rgba(74, 144, 226, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+}
+
+.author {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.deleteBtn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.deleteBtn:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.annotationText {
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1rem;
+} 

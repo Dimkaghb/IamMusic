@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "groq-sdk": "^0.21.0",
+    "mongodb": "^6.16.0",
+    "react-router-dom": "^7.6.0"
+  }
+}
