@@ -163,3 +163,6 @@
 ## 📎 Ссылка на приложение
 
 👉 [https://iammusic-frontend.onrender.com](https://iammusic-frontend.onrender.com)
+
+## 📎 Ссылка на демовидео
+[Посмотреть демо-видео проекта на Loom](https://www.loom.com/share/8c6d0f98abe146408b465dc000394b88?sid=3751e46b-94bc-4ab6-a05b-2949751a08c6)
