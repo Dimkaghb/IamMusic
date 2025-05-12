@@ -4,6 +4,7 @@ import styles from "./Register.module.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from '../config';
 
 
 
@@ -19,7 +20,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3001/api/users", {
+      const res = await axios.post(`${API_BASE_URL}/api/users`, {
         name,
         email,
         password,

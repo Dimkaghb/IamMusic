@@ -7,6 +7,7 @@ import AddSong from '../Components/AddSong';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import logo from '../assets/logo2.png'
+import { API_BASE_URL } from '../config';
 
 const Main = () => {
     
@@ -22,7 +23,7 @@ const Main = () => {
 
     const fetchSongs = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/api/songs');
+            const response = await axios.get(`${API_BASE_URL}/api/songs`);
             const songsData = response.data.map(song => ({
                 img: song.image || logo,
                 title: song.songTitle,

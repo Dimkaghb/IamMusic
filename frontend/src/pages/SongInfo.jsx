@@ -5,6 +5,7 @@ import Annotation from '../Components/Annotation';
 import styles from './SongInfo.module.css';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../config';
 
 const SongInfo = () => {
     const location = useLocation();
@@ -45,7 +46,7 @@ const SongInfo = () => {
 
         const fetchAnnotations = async () => {
             try {
-                const response = await axios.get(`http://localhost:3001/api/annotations/${title}/${author}`);
+                const response = await axios.get(`${API_BASE_URL}/api/annotations/${title}/${author}`);
                 setAnnotations(response.data);
             } catch (err) {
                 console.error('Error fetching annotations:', err);
@@ -62,7 +63,7 @@ const SongInfo = () => {
         if (!newAnnotation.trim() || !selectedTimestamp || !isLoggedIn) return;
 
         try {
-            const response = await axios.post('http://localhost:3001/api/annotations', {
+            const response = await axios.post(`${API_BASE_URL}/api/annotations`, {
                 songTitle: title,
                 songArtist: author,
                 timestamp: selectedTimestamp,
@@ -81,7 +82,7 @@ const SongInfo = () => {
 
     const handleDeleteAnnotation = async (id) => {
         try {
-            await axios.delete(`http://localhost:3001/api/annotations/${id}`, {
+            await axios.delete(`${API_BASE_URL}/api/annotations/${id}`, {
                 data: { userId: user._id }
             });
             setAnnotations(annotations.filter(annotation => annotation._id !== id));
@@ -97,7 +98,7 @@ const SongInfo = () => {
         setAiResponse("");
         try {
             const aiMessage = `Given these lyrics:\n${lyrics}\n\nUser prompt: ${aiInput}\n\nExplain this and give a short annotation in 2-5 sentences.`;
-            const res = await axios.post("http://localhost:3001/api/ai/ai-annotation", { content: aiMessage });
+            const res = await axios.post(`${API_BASE_URL}/api/ai/ai-annotation`, { content: aiMessage });
             setAiResponse(res.data.annotation);
         } catch (err) {
             setAiResponse("Failed to get AI annotation.");

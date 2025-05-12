@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from './AddSong.module.css'
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../config';
 
 const AddSong = ({ onClose, onSongAdded }) => {
   const [formData, setFormData] = useState({
@@ -59,7 +60,7 @@ const AddSong = ({ onClose, onSongAdded }) => {
         image: imagePreview
       };
 
-      await axios.post('http://localhost:3001/api/songs', songData);
+      await axios.post(`${API_BASE_URL}/api/songs`, songData);
       onSongAdded(); 
     } catch (err) {
       setError('Failed to add song. Please try again.');
